@@ -31,8 +31,21 @@ class ArvoreB:
                 eMaior = False
         return eMaior
 
-    def buscar(self):
-        pass
+    def buscar(self, nodo, elemento):
+        if not nodo:
+            return None  # Elemento não encontrado
+
+        i = 0
+        while i < len(nodo.pagina) and elemento > nodo.pagina[i]:
+            i += 1
+
+        if i < len(nodo.pagina) and elemento == nodo.pagina[i]:
+            return nodo  # Elemento encontrado no nodo atual
+
+        if len(nodo.filhos) == 0:
+            return None  # Elemento não encontrado
+
+        return self.buscar(nodo.filhos[i], elemento)
 
     def remover(self):
         pass
