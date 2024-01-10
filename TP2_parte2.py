@@ -21,4 +21,17 @@ arvoreB.inserir(arvoreB.raiz, 10)
 
 print("Inseri tudo!")
 
+print("Árvore B antes das remoções")
 arvoreB.printArvore(arvoreB.raiz)
+
+arvoreB.remover(arvoreB.raiz, 6)
+
+print("Árvore após remoções")
+arvoreB.printArvore(arvoreB.raiz)
+
+arvoreB.remover(arvoreB.raiz, 7)
+
+print("Árvore após remoções")
+arvoreB.printArvore(arvoreB.raiz)
+
+arvoreB.remover(arvoreB.raiz, 50)
